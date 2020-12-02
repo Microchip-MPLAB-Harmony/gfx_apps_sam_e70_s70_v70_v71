@@ -1,0 +1,23 @@
+{
+    "linker": {
+        "script": "..\\src\\config\\lcc_rgb565_mxt_e70_IAR\\flash.icf"
+    }, 
+    "assembler": {
+        "macros": [], 
+        "includes": []
+    }, 
+    "general": {
+        "name": "lcc_rgb565_mxt_e70_IAR", 
+        "device": "ATSAME70Q21B"
+    }, 
+    "compiler": {
+        "macros": [], 
+        "includes": [
+            "..\\src", 
+            "..\\src\\config\\lcc_rgb565_mxt_e70_IAR", 
+            "..\\src\\packs\\ATSAME70Q21B_DFP", 
+            "..\\src\\packs\\CMSIS\\CMSIS\\Core\\Include", 
+            "..\\src\\packs\\CMSIS"
+        ]
+    }
+}

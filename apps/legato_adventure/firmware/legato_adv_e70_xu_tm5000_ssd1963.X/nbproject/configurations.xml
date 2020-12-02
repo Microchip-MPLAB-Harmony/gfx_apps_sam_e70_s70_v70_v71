@@ -330,7 +330,6 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -672,9 +671,33 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f1"
+                     displayName="ssd1963_rgb565_mxt_wvga.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/drv_i2c.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/gfx_hal_le.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/le_gfx_intf_parallel_smc.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/smc.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/core.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/sys_input.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/twihs0.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/legato_gfx_pda_tm5000.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/efc.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/project.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/gfx_legato.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/gfx_disp_pdatm5000_800x480.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/gfx_maxtouch_controller.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/tc0.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/le_gfx_driver_external.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.mhc/HarmonyCore.yml</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/harmony.prj</itemPath>
-      <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/ssd1963_rgb565_mxt_wvga.xml</itemPath>
       <itemPath>../src/config/ssd1963_rgb565_mxt_wvga/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -691,8 +714,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
-        <platform>3</platform>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="SAME70_DFP" vendor="Microchip" version="4.2.59"/>
@@ -717,6 +740,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>

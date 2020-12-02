@@ -52,8 +52,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Included Files 
 // *****************************************************************************
 // *****************************************************************************
-
-#include "gfx/legato/generated/screen/le_gen_screen_FPSImages.h"
 #include "definitions.h"
 
 #include <stdio.h>
@@ -65,6 +63,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define FPS_UPDATE_TIMER_PERIOD_MS 1000
 #define MAX_NUM_IMAGES 2
 //#define ENABLE_FULL_SCREEN_IMAGE_TEST  1
+#define PNG_100x100_NOT_SUPPORTED 1
 
 static volatile leBool aveFPSValid = LE_FALSE;
 static int aveCounter = 0;
@@ -99,8 +98,8 @@ typedef enum
 
 typedef enum
 {
-    //IMG_PNG_8888,
-    //IMG_JPG_24,
+    IMG_PNG_8888,
+    IMG_JPG_24,
     IMG_RAW_565,
     IMG_RAW_RLE_565,
 #if defined(PRE_PROCESSED_IMAGES_SUPPORTED)            
@@ -126,11 +125,13 @@ char * imageSizeNames[IMG_MAX_SIZE] =
 
 unsigned int imageTypeNames[IMG_MAX_TYPE] = 
 {
+    stringID_PNG8888,    
+    stringID_JPG24Bit,    
     stringID_Raw565,
     stringID_RawRLE565,
 };
 
-/*IMAGE_LIST_T imagesPNG[] =
+IMAGE_LIST_T imagesPNG[] =
 {
     [IMG_40x40] = {
         {&PNG_GFX_mchp_40x40,
@@ -157,9 +158,9 @@ unsigned int imageTypeNames[IMG_MAX_TYPE] =
         NULL},
     },
  #endif
-};*/
+};
 
-/*IMAGE_LIST_T imagesJPG[] =
+IMAGE_LIST_T imagesJPG[] =
 {
     [IMG_40x40] = {
         {&JPG_GFX_mchp_40x40,
@@ -179,7 +180,7 @@ unsigned int imageTypeNames[IMG_MAX_TYPE] =
         &JPG_GFX_mplab_480x270},
     },
  #endif
-};*/
+};
 
 IMAGE_LIST_T imagesRAW[] =
 {
@@ -296,7 +297,7 @@ static void fpsUpdateTimer_Callback()
 {
     unsigned int rate;
     unsigned int i;
-    gfxIOCTLArg_Value ioctlArg;
+    gfxIOCTLArg_Value val;
     
     if(Screen3_ImageUpdateValue == NULL)
         return;
@@ -347,14 +348,13 @@ static void fpsUpdateTimer_Callback()
     
 
     //Update Refresh Rate
-    leGetRenderState()->dispDriver->ioctl(GFX_IOCTL_GET_VSYNC_COUNT, &ioctlArg);
-    uint32_t vsyncCount = ioctlArg.value.v_uint;
-    rate =  (vsyncCount - prevVsyncCount) / (FPS_UPDATE_TIMER_PERIOD_MS/1000);
+    leGetRenderState()->dispDriver->ioctl(GFX_IOCTL_GET_VSYNC_COUNT, (gfxIOCTLArg_Value*) &val); 
+    rate =  (val.value.v_uint - prevVsyncCount) / (FPS_UPDATE_TIMER_PERIOD_MS/1000);
 
     //If vsyncCount does not increase, assume fixed refresh rate using vsyncCount
     //value
     if (rate == 0)
-        rate = vsyncCount;
+        rate = val.value.v_uint;
 
     sprintf(charBuff, "%u", rate);
     
@@ -364,7 +364,7 @@ static void fpsUpdateTimer_Callback()
     
     
     prevDrawCount = leGetRenderState()->drawCount;
-    prevVsyncCount = vsyncCount;
+    prevVsyncCount = val.value.v_uint;
     
 //    DecrementCount(Counter1LabelWidget);
 }
@@ -382,11 +382,11 @@ static void increaseImageSize()
                     
     // Special handling, PNG sizes are limited to 100x100 due 
     // to memory limitations
-    /*if ((imgType == IMG_PNG_8888) && 
+    if ((imgType == IMG_PNG_8888) && 
         (imgSize > IMG_100x100))
     {
         imgSize = IMG_100x100;
-    }*/
+    }
 
     //Update image size label
     sprintf(charBuff, "%s", imageSizeNames[imgSize]);
@@ -464,26 +464,26 @@ static void nextImage()
         imgIndex = 0;
     }
     
-//    if (imgType == IMG_PNG_8888)
-//    {
-//        if (imagesPNG[imgSize].imgAsst[imgIndex] != NULL)
-//        {
-//            laImageWidget_SetImage(imgWidget, 
-//                                   imagesPNG[imgSize].imgAsst[imgIndex]);
-//        }
-//        else
-//        {
-//            
-//        }
-//    }
-//    else if (imgType == IMG_JPG_24)
-//    {
-//        if (imagesJPG[imgSize].imgAsst[imgIndex] != NULL)
-//        {
-//            laImageWidget_SetImage(imgWidget, 
-//                                   imagesJPG[imgSize].imgAsst[imgIndex]);
-//        }
-//    }
+    if (imgType == IMG_PNG_8888)
+    {
+        if (imagesPNG[imgSize].imgAsst[imgIndex] != NULL)
+        {
+            Screen3_ImageRenderArea->fn->setImage(Screen3_ImageRenderArea, 
+                                   imagesPNG[imgSize].imgAsst[imgIndex]);
+        }
+        else
+        {
+            
+        }
+    }
+    else if (imgType == IMG_JPG_24)
+    {
+        if (imagesJPG[imgSize].imgAsst[imgIndex] != NULL)
+        {
+            Screen3_ImageRenderArea->fn->setImage(Screen3_ImageRenderArea, 
+                                   imagesJPG[imgSize].imgAsst[imgIndex]);
+        }
+    }
     if (imgType == IMG_RAW_565)
     {
         if (imagesRAW[imgSize].imgAsst[imgIndex] != NULL)

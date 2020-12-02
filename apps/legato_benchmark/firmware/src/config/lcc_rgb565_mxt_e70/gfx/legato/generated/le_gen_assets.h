@@ -241,6 +241,78 @@ extern leImage MicrochipLogo;
  ***********************************/
 extern leImage PIC32Logo;
 
+/*********************************
+ * Legato Image Asset
+ * Name:   PNG_GFX_mchp_40x40
+ * Size:   40x40 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage PNG_GFX_mchp_40x40;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   PNG_GFX_mplab_40x40
+ * Size:   40x40 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage PNG_GFX_mplab_40x40;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   JPG_GFX_mchp_40x40
+ * Size:   40x40 pixels
+ * Type:   RGB Data
+ * Format: RGB_888
+ ***********************************/
+extern leImage JPG_GFX_mchp_40x40;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   JPG_GFX_mchp_100x100
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGB_888
+ ***********************************/
+extern leImage JPG_GFX_mchp_100x100;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   JPG_GFX_mchp_200x200
+ * Size:   200x200 pixels
+ * Type:   RGB Data
+ * Format: RGB_888
+ ***********************************/
+extern leImage JPG_GFX_mchp_200x200;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   JPG_GFX_mplab_40x40
+ * Size:   40x40 pixels
+ * Type:   RGB Data
+ * Format: RGB_888
+ ***********************************/
+extern leImage JPG_GFX_mplab_40x40;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   JPG_GFX_mplab_100x100
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGB_888
+ ***********************************/
+extern leImage JPG_GFX_mplab_100x100;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   JPG_GFX_mplab_200x200
+ * Size:   200x200 pixels
+ * Type:   RGB Data
+ * Format: RGB_888
+ ***********************************/
+extern leImage JPG_GFX_mplab_200x200;
+
 /*****************************************************************************
  * Legato Graphics Font Assets
  *****************************************************************************/
