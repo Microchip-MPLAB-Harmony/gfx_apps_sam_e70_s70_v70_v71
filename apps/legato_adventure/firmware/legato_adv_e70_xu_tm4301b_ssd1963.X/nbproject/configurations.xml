@@ -330,6 +330,7 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -674,28 +675,28 @@
       <logicalFolder name="f1"
                      displayName="ssd1963_rgb565_mxt_e70.mhc"
                      projectFiles="true">
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/drv_i2c.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/gfx_hal_le.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/le_gfx_intf_parallel_smc.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/smc.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/core.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/legato_gfx_pda_tm4301b.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
         <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/sys_input.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/twihs0.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/core.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/drv_i2c.yml</itemPath>
         <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/efc.yml</itemPath>
         <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/gfx_disp_pdatm4301b_480x272.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/project.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/gfx_hal_le.yml</itemPath>
         <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/gfx_legato.yml</itemPath>
         <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/gfx_maxtouch_controller.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/tc0.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/sys_time.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/le_gfx_driver_external.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/legato_gfx_pda_tm4301b.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/le_gfx_driver_external.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/le_gfx_intf_parallel_smc.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/project.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/smc.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/sys_input.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/tc0.yml</itemPath>
+        <itemPath>../src/config/ssd1963_rgb565_mxt_e70/ssd1963_rgb565_mxt_e70.mhc/twihs0.yml</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/ssd1963_rgb565_mxt_e70/harmony-manifest-success.yml</itemPath>
@@ -715,11 +716,11 @@
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>2</platform>
+        <platform>3</platform>
       </toolsSet>
       <packs>
+        <pack name="SAME70_DFP" vendor="Microchip" version="4.4.78"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAME70_DFP" vendor="Microchip" version="4.0.40"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -781,7 +782,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/ssd1963_rgb565_mxt_e70;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/ssd1963_rgb565_mxt_e70;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -877,7 +878,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/ssd1963_rgb565_mxt_e70;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/ssd1963_rgb565_mxt_e70;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -918,6 +919,7 @@
         <property key="firmware.toolpack"
                   value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -931,6 +933,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="400000-5fffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>

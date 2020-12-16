@@ -50,15 +50,20 @@ extern "C" {
 // DOM-IGNORE-END
 
 
-#define LE_COHERENT_ATTR                     
+#include <toolchain_specifics.h>
+
+#define LE_COHERENT_ATTR                     CACHE_ALIGN
 #define LE_COHERENT_MEMORY                   LE_COHERENT_ATTR
 
 
 #define LE_DEFAULT_COLOR_MODE                LE_COLOR_MODE_RGB_565
 #define LE_TOUCH_ORIENTATION                 0
+#define LE_RENDER_ORIENTATION                0
 #define LE_DRIVER_LAYER_MODE                 1
+//CUSTOM CODE
 #define LE_DYNAMIC_VTABLES                   1
-
+//CUSTOM CODE - ENDS
+  
 #define LE_ASSERT_ENABLE                     0
 
 // image decoder configuration

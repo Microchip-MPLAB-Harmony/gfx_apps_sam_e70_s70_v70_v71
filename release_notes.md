@@ -22,13 +22,14 @@ Following table provides number of peripheral library examples available for dif
 New features added in this release are as follows:
 
 - Applications migrated from gfx and gfx_apps repository to this new application repository for SAM E70/S70/V70/V71 development support
-
+- Added legato_quickstart_e70_xu_tm4301b.IAR and legato_quickstart_e70_xu_tm4301b_ssd1963.IAR configurations
 
 ### Known Issues
 
 The current known issues are as follows:
 
 - Legato Flash: Visual artifact during data transfer when using SD EMMC card, without any impact to the transfer data
+- For all IAR configurations, make sure LE_DYNAMIC_VTABLES is define to 1 to ensure build success
 
 ### Development Tools
 

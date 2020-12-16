@@ -117,6 +117,7 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -201,21 +202,21 @@
       <logicalFolder name="f1"
                      displayName="lcc_rgb565_mxt_e70.mhc"
                      projectFiles="true">
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/gfx_hal_le.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/smc.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/core.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/legato_gfx_pda_tm4301b.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/tc2.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/le_gfx_driver_lcc.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/core.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/efc.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/gfx_disp_pdatm4301b_480x272.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/project.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/gfx_hal_le.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/legato_gfx_pda_tm4301b.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/le_gfx_driver_lcc.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/project.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/smc.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/tc2.yml</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/lcc_rgb565_mxt_e70/harmony-manifest-success.yml</itemPath>
@@ -234,12 +235,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAME70_DFP" vendor="Microchip" version="4.1.50"/>
+        <pack name="SAME70_DFP" vendor="Microchip" version="4.4.78"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -438,6 +439,7 @@
         <property key="firmware.toolpack"
                   value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -451,7 +453,10 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="400000-5fffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/harmony3_dev/harmony_gfx_apps_sam_e70_s70_v70_v71/apps/blank_quickstart/firmware/blank_qs_e70_xu_tm4301b.X/debug/lcc_rgb565_mxt_e70/blank_qs_e70_xu_tm4301b_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

@@ -244,7 +244,7 @@ const DRV_USBHSV1_INIT drvUSBInit =
     .operationMode = DRV_USBHSV1_OPMODE_HOST,
 
     /* To operate in USB Normal Mode */
-    .operationSpeed = DRV_USBHSV1_DEVICE_SPEEDCONF_NORMAL,
+	.operationSpeed = DRV_USBHSV1_DEVICE_SPEEDCONF_LOW_POWER,
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = USBHS_REGS,
@@ -363,6 +363,7 @@ const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
+
 
     EFC_Initialize();
   

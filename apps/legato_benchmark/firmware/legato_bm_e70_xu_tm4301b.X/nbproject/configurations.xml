@@ -667,27 +667,27 @@
       <logicalFolder name="f1"
                      displayName="lcc_rgb565_mxt_e70.mhc"
                      projectFiles="true">
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/drv_i2c.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/smc.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/core.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/legato_gfx_pda_tm4301b.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/sys_input.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/tc2.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/le_gfx_driver_lcc.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/twihs0.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/core.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/drv_i2c.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/efc.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/gfx_disp_pdatm4301b_480x272.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/project.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/gfx_legato.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/gfx_maxtouch_controller.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/BSP_SAM_E70_Xplained_Ultra.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/tc0.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/sys_time.yml</itemPath>
-        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/legato_gfx_pda_tm4301b.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/le_gfx_driver_lcc.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/project.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/smc.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/sys_input.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/tc0.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/tc2.yml</itemPath>
+        <itemPath>../src/config/lcc_rgb565_mxt_e70/lcc_rgb565_mxt_e70.mhc/twihs0.yml</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/lcc_rgb565_mxt_e70/harmony-manifest-success.yml</itemPath>
@@ -707,7 +707,7 @@
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>2</platform>
+        <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="SAME70_DFP" vendor="Microchip" version="4.4.78"/>
