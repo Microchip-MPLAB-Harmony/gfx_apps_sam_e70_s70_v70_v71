@@ -42,14 +42,16 @@
 				"Development Kit", "SAM E70 Xplained Ultra Evaluation Kit"
 			],
 			[
-				"Harmony", "Middleware", "Graphics", "LEGATO_ADVENTURE"
+				"Harmony", "Middleware", "Graphics", "Legato", "LEGATO_ADVENTURE"
 			],
 			[
-				"Middleware", "Graphics", "LEGATO_ADVENTURE"
+				"Middleware", "Graphics", "Legato", "LEGATO_ADVENTURE"
 			]
 		],
 		"peripherals": [
-			"GPU"
+			"External Display Controller",
+            "Touch",
+            "I2C"
 		],
 		"keywords": [
 			"MHC",
@@ -58,11 +60,13 @@
 			"Graphics",
 			"ATSAME70Q21B",
 			"SAM E70/S70/V70/V71 Family",
-			"GPU",
-			"External Bus Interface",
-			"External Memory",
 			"Memory",
-			"Graphics"
+			"Legato",
+            "SSD1963",
+            "Touch",
+            "I2C",
+            "MaxTouch 5in",
+            "Animation"
 		],
 		"additionalData": {
 			"longDescription": {
