@@ -100,6 +100,7 @@ leResult screenShow_Screen2(void)
     Screen2_ButtonWidget0->fn->setSize(Screen2_ButtonWidget0, 213, 45);
     Screen2_ButtonWidget0->fn->setScheme(Screen2_ButtonWidget0, &WhiteBackgroundScheme);
     Screen2_ButtonWidget0->fn->setString(Screen2_ButtonWidget0, (leString*)&string_String_PressHere);
+    Screen2_ButtonWidget0->fn->setReleasedEventCallback(Screen2_ButtonWidget0, event_Screen2_ButtonWidget0_OnReleased);
     root0->fn->addChild(root0, (leWidget*)Screen2_ButtonWidget0);
 
     leAddRootWidget(root0, 0);

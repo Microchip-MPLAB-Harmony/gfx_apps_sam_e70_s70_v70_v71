@@ -124,4 +124,4 @@ children:
       - type: Dynamic
         attributes: {id: le_gfx_driver_lcc, value: le_gfx_driver_lcc}
 - type: ElementPosition
-  attributes: {x: '650', y: '140', id: gfx_hal_le}
+  attributes: {x: '621', y: '97', id: gfx_hal_le}

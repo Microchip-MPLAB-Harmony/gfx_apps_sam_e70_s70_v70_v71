@@ -21,7 +21,12 @@ extern leLabelWidget* Screen2_LabelWidget2;
 extern leLabelWidget* Screen2_LabelWidget3;
 extern leLabelWidget* Screen2_LabelWidget4;
 extern leLabelWidget* Screen2_LabelWidget5;
+extern leLabelWidget* Screen2_LabelWidget6;
 extern leButtonWidget* Screen2_ButtonWidget0;
+
+// event handlers
+// !!THESE MUST BE IMPLEMENTED IN THE APPLICATION CODE!!
+void event_Screen2_ButtonWidget0_OnReleased(leButtonWidget* btn);
 
 // screen lifecycle functions
 // DO NOT CALL THESE DIRECTLY

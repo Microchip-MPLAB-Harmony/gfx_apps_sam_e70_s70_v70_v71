@@ -108,6 +108,8 @@ If a valid USB MSD device is connected, the display will a USB button. LED1 (red
 
 If a valid SDMMC device is connected, the display will a SD button. LED2 (yellow) will light up also.
 
+**Known Issue:** There is a visual artifact during data transfer when using SD EMMC card.  There is no corruption to the transfer data. 
+
 ![](../../../../docs/html/legato_flash_run2.png)
 
 FAT32 file system format and a valid external resources file named precisely **SQI.hex** Make sure the USB MSD device or the SD MMC device has is copied inside.

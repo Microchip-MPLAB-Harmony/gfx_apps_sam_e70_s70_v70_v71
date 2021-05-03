@@ -6,7 +6,7 @@ Defining the Architecture
 
 ![](../../../../docs/html/sam_e70_xu_tm4301b_ssd1963_arch.png)
 
-The architecture for this configuraiton is the SAM E70 Xplained Ultra + 4.3” WQVGA with SSD1963 GFX Interface Card interface through the 16-bit 8080 mode.
+The architecture for this configuraiton is the SAM E70 Xplained Ultra + High-Performance 4.3" WQVGA Display Module with maXTouch® Technology with SSD1963 GFX Interface Card interface through the 16-bit 8080 mode.
 
 The SSD1963 is connected to the SAM E70 thru the SMC peripheral and GPIOs which are used to send 16-bit parallel data/commands and to bit-bang control signals to the SSD1963 controller, respectively. The frame buffer is stored externally in the SSD1963 controller.
 
@@ -50,7 +50,7 @@ Configuring the Hardware
 
 The final setup should be: 
 
-![](../../../../docs/html/legato_adv_e70_xu_tm4301b_ssd1963_conf1.png)
+![](../../../../docs/html/e70_xu_tm4301b_ssd1963_conf1.png)
 
 Running the Demonstration
 -------------------------

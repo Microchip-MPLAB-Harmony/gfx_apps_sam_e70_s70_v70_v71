@@ -78,9 +78,15 @@ void SYS_Tasks ( void )
         DRV_LCC_Update();
 
 
+    DRV_MAXTOUCH_Tasks(sysObj.drvMAXTOUCH);
+
+
 
     /* Maintain Middleware & Other Libraries */
     
+    SYS_INP_Tasks();
+
+
 
     /* Maintain the application's state machine. */
         /* Call Application task APP_16. */

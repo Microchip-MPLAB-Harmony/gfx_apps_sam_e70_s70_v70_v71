@@ -85,6 +85,7 @@ extern const uint8_t NewHarmonyLogo_data[41280];
 
 APP_16_DATA appData;
 gfxPixelBuffer imageBuffer;
+SYS_INP_InputListener appInputListener;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -92,8 +93,22 @@ gfxPixelBuffer imageBuffer;
 // *****************************************************************************
 // *****************************************************************************
 
-/* TODO:  Add any necessary callback functions.
-*/
+static void touchDownHandler(const SYS_INP_TouchStateEvent* const evt)
+{
+    LED1_On();
+}
+
+static void touchUpHandler(const SYS_INP_TouchStateEvent* const evt)
+{
+    LED1_Off();
+    LED2_Off();
+}
+
+static void touchMoveHandler(const SYS_INP_TouchMoveEvent* const evt)
+{
+    LED2_On();
+}
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -101,42 +116,6 @@ gfxPixelBuffer imageBuffer;
 // *****************************************************************************
 // *****************************************************************************
 
-
-/* TODO:  Add any necessary local functions.
-*/
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Application Initialization and State Machine Functions
-// *****************************************************************************
-// *****************************************************************************
-
-/*******************************************************************************
-  Function:
-    void APP_Initialize ( void )
-
-  Summary:
-    Maintains state machine of APP.
- 
- */
-
-void APP_16_Initialize ( void )
-{
-    /* Place the App state machine in its initial state. */
-    appData.state = APP_STATE_INIT;
-
-    
-    /* TODO: Initialize your application's state machine and other
-     * parameters.
-     */
-}
-
-/*******************************************************************************
-  Function:
-    void APP_Initialize ( void )
-
- */
 static void APP_PaintFrameWithBuffer(
                     uint16_t * buff,
                     int x,
@@ -187,6 +166,32 @@ static void APP_PaintFrameWithColor(
     }
 }
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: Application Initialization and State Machine Functions
+// *****************************************************************************
+// *****************************************************************************
+
+/*******************************************************************************
+  Function:
+    void APP_Initialize ( void )
+
+  Summary:
+    Maintains state machine of APP.
+ 
+ */
+
+void APP_16_Initialize ( void )
+{
+    /* Place the App state machine in its initial state. */
+    appData.state = APP_STATE_INIT;
+    
+    
+    /* TODO: Initialize your application's state machine and other
+     * parameters.
+     */
+}
+
 
 /******************************************************************************
   Function:
@@ -213,6 +218,12 @@ void APP_16_Tasks ( void )
                     &NewHarmonyLogo_data[0],
                     &imageBuffer);
                 
+            // Register the input event handlers
+            appInputListener.handleTouchDown = &touchDownHandler;
+            appInputListener.handleTouchUp = &touchUpHandler;
+            appInputListener.handleTouchMove = &touchMoveHandler;
+            SYS_INP_AddListener(&appInputListener);
+
             if (appData.state != APP_STATE_ERROR)
             {
                 if (appInitialized)
@@ -267,7 +278,6 @@ void APP_16_Tasks ( void )
         /* The default state should never be executed. */
         default:
         {
-            LED1_On();
             //Light the LED for error
             break;
         }

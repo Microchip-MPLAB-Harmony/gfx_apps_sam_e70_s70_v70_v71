@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.gfx_apps_sam_e70_s70_v70_v71_legato_quickstart_ext_res_legato_qs_x_r_e70_xu_tm4301b",
-		"version": "3.9.0",
+		"version": "3.9.1",
 		"displayName": "Legato Quickstart External Resources Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "legato_quickstart_x_r_e70_xu_wqvga",
 		"shortDescription": "The legato_quickstart_external_resources (external flash reader) application demonstrates reading multiple images, multi-lingual strings and multiple font assets from both internal and external non-volatile memory (NVM).  The external resources are pre-programmed into the NVM using the legato_flash demonstration application.",

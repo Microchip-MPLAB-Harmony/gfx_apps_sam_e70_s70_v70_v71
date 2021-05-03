@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.gfx_apps_sam_e70_s70_v70_v71_legato_adventure_legato_adv_e70_xu_tm5000_ssd1963",
-		"version": "3.9.0",
+		"version": "3.9.1",
 		"displayName": "Legato Adventure Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "legato_adventure_e70_xu_wvga_ssd1963",
 		"shortDescription": "This application demonstrates parallax and sprite animation capabilities using the graphics library. The application first launches a splash screen highlighting basic motion capability supported by the graphics library then transistions to the main screen.",

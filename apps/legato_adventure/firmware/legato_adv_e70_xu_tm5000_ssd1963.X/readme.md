@@ -6,7 +6,7 @@ Defining the Architecture
 
 ![](../../../../docs/html/sam_e70_xu_tm5000_ssd1963_arch.png)
 
-The architecture for this configuraiton is the SAM E70 Xplained Ultra + 4.3” WQVGA with SSD1963 GFX Interface Card interface through the 16-bit 8080 mode.
+The architecture for this configuraiton is the SAM E70 Xplained Ultra + High-Performance WVGA LCD Display Module with maXTouch® Technology with SSD1963 GFX Interface Card interface through the 16-bit 8080 mode.
 
 The SSD1963 is connected to the SAM E70 thru the SMC peripheral and GPIOs which are used to send 16-bit parallel data/commands and to bit-bang control signals to the SSD1963 controller, respectively. The frame buffer is stored externally in the SSD1963 controller.
 
@@ -22,6 +22,7 @@ User touch input on the display panel is received thru the PCAP capacitive touch
 * EBI peripheral library and driver
 * I2C peripheral library and driver
 * JPEG image stored in internal flash
+* 800x480 display resolution
 
 Creating the Project Graph
 --------------------------
@@ -41,7 +42,7 @@ The following table lists configuration properties:
 
 | Project Name  | BSP Used |Graphics Template Used | Description |
 |---------------| ---------|---------------| ---------|
-| legato_adv_e70_xu_tm5000_ssd1963.X |SAM E70 Xplained Ultra| Legato Graphics w/ PDA tm5000 Display | Legato GFX on SAM E70 Xplained Ultra board with PDA tm5000 480x272 (WVGA) Display and SSD1963 display driver  |
+| legato_adv_e70_xu_tm5000_ssd1963.X |SAM E70 Xplained Ultra| Legato Graphics w/ PDA tm5000 Display | Legato GFX on SAM E70 Xplained Ultra board with PDA tm5000 800x480 (WVGA) Display and SSD1963 display driver  |
 
 > \*\*\_NOTE:\_\*\* This application may contain custom code that is marked by the comments // START OF CUSTOM CODE ... and // END OF CUSTOM CODE. When using the MPLAB Harmony Configurator to regenerate the application code, use the "ALL" merging strategy and do not remove or replace the custom code.
 
@@ -50,7 +51,7 @@ Configuring the Hardware
 
 The final setup should be: 
 
-![](../../../../docs/html/legato_qs_e70_xu_tm4301b_ssd1963_conf1.png)
+![](../../../../docs/html/e70_xu_tm5000_ssd1963_conf1.png)
 
 Running the Demonstration
 -------------------------
@@ -71,6 +72,6 @@ Tap Jump and the lamb will play out a jump animation.
 
 Info Screen describes the features supported by this demo
 
-![](../../../../docs/html/legato_adv_wqvga_run4.png)
+![](../../../../docs/html/legato_adv_wvga_run4.png)
 
 * * * * *

@@ -539,22 +539,26 @@ extern leRasterFont NotoSans_Regular;
  * Legato Font Asset
  * Name:         NotoSans_Regular_Small
  * Height:       21
- * Baseline:     12
+ * Baseline:     13
  * Style:        Antialias
- * Glyph Count:  56
- * Range Count:  12
+ * Glyph Count:  55
+ * Range Count:  16
  * Glyph Ranges: 0x20
                  0x28-0x29
                  0x2C-0x2D
-                 0x30-0x3A
+                 0x30-0x31
+                 0x33
+                 0x35-0x37
+                 0x39-0x3A
                  0x41-0x45
                  0x47-0x49
                  0x4C-0x4E
-                 0x50-0x53
-                 0x55-0x58
+                 0x50
+                 0x52-0x58
                  0x61-0x69
                  0x6C-0x75
-                 0x78-0x79
+                 0x77-0x79
+                 0xAE
 ***********************************/
 extern leRasterFont NotoSans_Regular_Small;
 

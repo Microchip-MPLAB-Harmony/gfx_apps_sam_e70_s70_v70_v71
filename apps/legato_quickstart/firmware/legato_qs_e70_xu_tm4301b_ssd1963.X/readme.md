@@ -48,7 +48,7 @@ Configuring the Hardware
 
 The final setup should be: 
 
-![](../../../../docs/html/legato_qs_e70_xu_tm4301b_ssd1963_conf1.png)
+![](../../../../docs/html/e70_xu_tm4301b_ssd1963_conf1.png)
 
 Running the Demonstration
 -------------------------

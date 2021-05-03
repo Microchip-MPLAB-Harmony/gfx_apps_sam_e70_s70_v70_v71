@@ -48,7 +48,15 @@ Configuring the Hardware
 
 The final setup should be: 
 
-![](../../../../docs/html/legato_qs_e70_xu_tm4301b_ssd1963_conf1.png)
+![](../../../../docs/html/e70_xu_tm4301b_ssd1963_conf1.png)
+
+The board and display are powered by a Micro B USB A cable from PC to the **Debug USB** port on the E70 board.
+
+In IAR, make sure the debugger setting is pointed to CMSIS DAP.
+
+![](../../../../docs/html/iar_sam_e70_debugger_setup.png)
+
+**Download and Debug** to deploy to the device.
 
 Running the Demonstration
 -------------------------

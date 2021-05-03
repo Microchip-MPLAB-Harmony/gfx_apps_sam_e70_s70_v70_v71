@@ -1,0 +1,14 @@
+configName: lcc_rgb565_mxt_e70_90
+folderName: legato_qs_e70_xu_tm4301b_90
+format_version: v1.0
+frameworkPath: ..\..\..\..\harmony3_dev
+processor: ATSAME70Q21B
+projectName: legato_quickstart_e70_xu_tm4301b_90
+settings:
+  PackageFilter: aerospace;audio;bsp;core;csp;gfx;harmony_gfx_apps_pic32mz_da;harmony_gfx_apps_pic32mz_ef;harmony_gfx_apps_sam_9x60;harmony_gfx_apps_sam_a5d2;harmony_gfx_apps_sam_c20_c21;harmony_gfx_apps_sam_d5x_e5x;harmony_gfx_apps_sam_e70_s70_v70_v71;touch;usb
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\SAME70_DFP\4.5.86\same70b\atdf\ATSAME70Q21B.atdf

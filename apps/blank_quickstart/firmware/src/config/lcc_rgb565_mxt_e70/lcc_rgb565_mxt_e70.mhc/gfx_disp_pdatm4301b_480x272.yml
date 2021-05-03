@@ -17,5 +17,18 @@ children:
         attributes: {id: targetAttachmentID}
         children:
         - {type: Value, value: Graphics Display}
+  - type: DirectCapability
+    attributes: {id: touch_panel}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: gfx_maxtouch_controller}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: touch_panel}
 - type: ElementPosition
   attributes: {x: '16', y: '154', id: gfx_disp_pdatm4301b_480x272}

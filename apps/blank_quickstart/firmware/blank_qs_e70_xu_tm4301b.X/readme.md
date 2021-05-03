@@ -13,6 +13,7 @@ User touch input on the display panel is received thru the PCAP capacitive touch
 ### Demonstration Features
 
 -   3rd-Party graphics driver abstraction
+-   Touch Event Handling
 -   DMA System Service
 -   Low-Cost Controllerless (LCC) graphics driver
 -   16-bit RGB565 color depth support (65535 unique colors)
@@ -25,7 +26,7 @@ Creating the Project Graph
 
 The Project Graph diagram shows the Harmony components that are included in this application. Lines between components are drawn to satisfy components that depend on a capability that another component provides.
 
-Adding the **SAM E70 Xplained Ultra BSP** and **Legato Graphics w/ PDA TM4301B Display** Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller.
+Adding the **SAM E70 Xplained Ultra BSP** and **Legato Graphics w/ PDA TM4301B Display** Graphics Template component into the project graph will automatically add the components needed for a graphics project and resolve their dependencies. It will also configure the pins needed to drive the external peripherals like the display and the touch controller. Remove the Legato Component to complete the setup.
 
 Building the Application
 ------------------------

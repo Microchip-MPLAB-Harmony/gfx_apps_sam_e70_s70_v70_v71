@@ -11,6 +11,7 @@ leLabelWidget* Screen2_LabelWidget2;
 leLabelWidget* Screen2_LabelWidget3;
 leLabelWidget* Screen2_LabelWidget4;
 leLabelWidget* Screen2_LabelWidget5;
+leLabelWidget* Screen2_LabelWidget6;
 leButtonWidget* Screen2_ButtonWidget0;
 
 static leBool initialized = LE_FALSE;
@@ -90,16 +91,24 @@ leResult screenShow_Screen2(void)
 
     Screen2_LabelWidget5 = leLabelWidget_New();
     Screen2_LabelWidget5->fn->setPosition(Screen2_LabelWidget5, 31, 270);
-    Screen2_LabelWidget5->fn->setSize(Screen2_LabelWidget5, 430, 40);
+    Screen2_LabelWidget5->fn->setSize(Screen2_LabelWidget5, 600, 40);
     Screen2_LabelWidget5->fn->setBackgroundType(Screen2_LabelWidget5, LE_WIDGET_BACKGROUND_NONE);
-    Screen2_LabelWidget5->fn->setString(Screen2_LabelWidget5, (leString*)&string_String_Features);
+    Screen2_LabelWidget5->fn->setString(Screen2_LabelWidget5, (leString*)&string_String_Resolution);
     root0->fn->addChild(root0, (leWidget*)Screen2_LabelWidget5);
+
+    Screen2_LabelWidget6 = leLabelWidget_New();
+    Screen2_LabelWidget6->fn->setPosition(Screen2_LabelWidget6, 31, 320);
+    Screen2_LabelWidget6->fn->setSize(Screen2_LabelWidget6, 430, 40);
+    Screen2_LabelWidget6->fn->setBackgroundType(Screen2_LabelWidget6, LE_WIDGET_BACKGROUND_NONE);
+    Screen2_LabelWidget6->fn->setString(Screen2_LabelWidget6, (leString*)&string_String_Features);
+    root0->fn->addChild(root0, (leWidget*)Screen2_LabelWidget6);
 
     Screen2_ButtonWidget0 = leButtonWidget_New();
     Screen2_ButtonWidget0->fn->setPosition(Screen2_ButtonWidget0, 568, 420);
     Screen2_ButtonWidget0->fn->setSize(Screen2_ButtonWidget0, 213, 45);
     Screen2_ButtonWidget0->fn->setScheme(Screen2_ButtonWidget0, &WhiteBackgroundScheme);
     Screen2_ButtonWidget0->fn->setString(Screen2_ButtonWidget0, (leString*)&string_String_PressHere);
+    Screen2_ButtonWidget0->fn->setReleasedEventCallback(Screen2_ButtonWidget0, event_Screen2_ButtonWidget0_OnReleased);
     root0->fn->addChild(root0, (leWidget*)Screen2_ButtonWidget0);
 
     leAddRootWidget(root0, 0);
@@ -129,6 +138,7 @@ void screenHide_Screen2(void)
     Screen2_LabelWidget3 = NULL;
     Screen2_LabelWidget4 = NULL;
     Screen2_LabelWidget5 = NULL;
+    Screen2_LabelWidget6 = NULL;
     Screen2_ButtonWidget0 = NULL;
 
 

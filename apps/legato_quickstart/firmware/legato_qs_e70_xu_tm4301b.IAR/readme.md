@@ -48,17 +48,15 @@ Configuring the Hardware
 
 The final setup should be: 
 
-![](../../../../docs/html/legato_qs_e70_xu_tm4301b_conf1.png)
+![](../../../../docs/html/e70_xu_tm4301b_ssd1963_conf1.png)
 
-Configuring the WQVGA Display requires disconnecting the ribbon cable that connects the display to the interposer board. 
+The board and display are powered by a Micro B USB A cable from PC to the **Debug USB** port on the E70 board.
 
-![](../../../../docs/html/legato_qs_e70_xu_tm4301b_conf2.png)
+In IAR, make sure the debugger setting is pointed to CMSIS DAP.
 
-First, release the ribbon cable from the interposer board. Next, release the black clamp on the E70\'s J2 connector and turn the display over. Finally, insert the ribbon cable into J2 and close the clamp
+![](../../../../docs/html/iar_sam_e70_debugger_setup.png)
 
-![](../../../../docs/html/legato_qs_e70_xu_tm4301b_conf3.png)
-
-The board and display are powered by a Micro B USB A cable from PC to the **Debug USB** port on the E70 board. The ICD4 Debugger and ICD4/PICKit4 Adapter Board are connected as shown above.
+**Download and Debug** to deploy to the device.
 
 Running the Demonstration
 -------------------------
