@@ -15,7 +15,7 @@ Refer to [legato_flash](../legato_flash/readme.md) for external NVM programming 
 
 Applications requiring multiple images or non-alphabet-based languages with large number of glyphs, have a very large NVM requirement for their graphics resources.   In such applications, storing these graphics resources on-chip may be inefficient or impossible.  The solution is to store the graphics resources to off-chip NVM, thereby preserving the on-chip NVM for program memory and allowing for more complex functional features.
 
-The legato_quickstart_external_resources (external flash reader) application populates some of its user interface from assets stored on on-chip NVM and other parts of it from assets stored as binary data on an external NVM.   The resources are previous copied into the external NVM using the legato_flash application.
+The legato_quickstart_external_resources (external flash reader) application populates some of its user interface from assets stored on on-chip NVM and other parts of it from assets stored as binary data on an external NVM.   The resources, stored on file SQI.hex, are previous copied into the external NVM using the legato_flash application.
 
 To demonstrate how to access graphics resources stored on an external memory device, three components are needed:
 

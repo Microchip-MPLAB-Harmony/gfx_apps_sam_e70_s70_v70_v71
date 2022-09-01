@@ -2,9 +2,9 @@
 	"metaDataVersion": "1.0.0",
 	"category": "com.microchip.ide.project",
 	"content": {
-		"metaDataVersion": "1.1.0",
+		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.gfx_apps_sam_e70_s70_v70_v71_legato_flash_legato_fl_e70_xu_tm4301b",
-		"version": "3.9.1",
+		"version": "3.10.0",
 		"displayName": "Legato Flash Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "legato_flash_e70_xu_wqvga",
 		"shortDescription": "The legato_flash demonstration application serves as an external memory programmer to flash the off-chip non-volatile memory with the resources held on an Memory Storage Device (MSD), such as a USB or a SD card, which can then be accessed by other applications saving on-chip memory for other programs and resources.",
@@ -37,41 +37,19 @@
 			}
 		},
 		"author": "Microchip",
-		"subcategories": [
-			[
-				"Development Kit", "SAM E70 Xplained Ultra Evaluation Kit"
-			],
-			[
-				"Harmony", "Middleware", "Graphics", "Legato", "LEGATO_FLASH"
-			],
-			[
-				"Middleware", "Graphics", "Legato", "LEGATO_FLASH"
-			]
-		],
-		"peripherals": [
-			"LCC",
-            "Touch",
-            "I2C",
-            "QSPI",
-            "USB",
-            "Memory Card"
-		],
 		"keywords": [
-			"MHC",
-			"Harmony",
-			"Middleware",
-			"Graphics",
-			"ATSAME70Q21B",
-			"SAM E70/S70/V70/V71 Family",
-			"Memory",
-			"Legato",
-            "LCC",
-            "Touch",
+            "MHC",
+            "MCC",
+            "ARM",
+            "Harmony",
+            "Middleware",
+            "Graphics",
+            "Memory",
+            "Legato",
+            "maXTouch",
             "I2C",
             "QSPI",
-            "MaxTouch 4.3in",
             "File System",
-            "Memory Card",
             "USB"
 		],
 		"additionalData": {

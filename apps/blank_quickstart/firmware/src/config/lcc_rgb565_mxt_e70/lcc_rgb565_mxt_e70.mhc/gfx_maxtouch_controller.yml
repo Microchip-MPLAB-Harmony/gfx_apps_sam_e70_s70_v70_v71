@@ -4,6 +4,13 @@ attributes: {id: gfx_maxtouch_controller}
 children:
 - type: Symbols
   children:
+  - type: Combo
+    attributes: {id: DRV_I2C_MODE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: gfx_maxtouch_controller, value: Asynchronous}
   - type: Integer
     attributes: {id: DRV_MAXTOUCH_I2C_INDEX}
     children:
@@ -24,6 +31,33 @@ children:
       children:
       - type: Dynamic
         attributes: {id: gfx_maxtouch_controller, value: '272'}
+  - type: Boolean
+    attributes: {id: RTOSEnabled}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Menu
+    attributes: {id: RTOSMenu}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: File
+    attributes: {id: TOUCH_DRV_RTOS_TASK_C}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
   - type: Integer
     attributes: {id: Width}
     children:

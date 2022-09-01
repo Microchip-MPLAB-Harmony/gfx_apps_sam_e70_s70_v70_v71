@@ -40,7 +40,6 @@
 
 
 
-
 #include "gfx/driver/controller/lcc/drv_gfx_lcc.h"
 #include "definitions.h"
 
@@ -398,6 +397,7 @@ static void displayRefresh(void)
         {
             if (hSyncs > vsyncPulseDown)
             {
+
                 GFX_DISP_INTF_PIN_VSYNC_Set();
 
                 vsyncPulseUp = hSyncs + DISP_VER_PULSE_WIDTH;

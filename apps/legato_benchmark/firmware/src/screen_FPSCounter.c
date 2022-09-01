@@ -132,13 +132,13 @@ static void fpsUpdateTimer_Callback()
         return;
     
     //Update the 10-pt rolling average
-    prevDrawCountAve[aveCounter] = (leGetRenderState()->drawCount - prevDrawCount);
+    prevDrawCountAve[aveCounter] = (leRenderer_GetDrawCount() - prevDrawCount);
     
     //If not pressed, show current FPS
     if(Screen1_FPSUpdateValue->fn->getPressed(Screen1_FPSUpdateValue) == LE_FALSE)
     {
             //Update FPS
-        rate = (leGetRenderState()->drawCount - prevDrawCount)/
+        rate = (leRenderer_GetDrawCount() - prevDrawCount)/
                (FPS_UPDATE_TIMER_PERIOD_MS/1000);
 
         sprintf(charBuff, "%u curr", rate);
@@ -177,7 +177,7 @@ static void fpsUpdateTimer_Callback()
     
 
     //Update Refresh Rate
-    leGetRenderState()->dispDriver->ioctl(GFX_IOCTL_GET_VSYNC_COUNT, &ioctlArg);
+    leRenderer_DisplayInterface()->ioctl(GFX_IOCTL_GET_VSYNC_COUNT, &ioctlArg);
     uint32_t vsyncCount = ioctlArg.value.v_uint;
     rate =  (vsyncCount - prevVsyncCount) / (FPS_UPDATE_TIMER_PERIOD_MS/1000);
 
@@ -193,7 +193,7 @@ static void fpsUpdateTimer_Callback()
                                    (leString*)&refreshRateText);
     
     
-    prevDrawCount = leGetRenderState()->drawCount;
+    prevDrawCount = leRenderer_GetDrawCount();
     prevVsyncCount = vsyncCount;
     
 //    APP_DecrementCount(Screen1_FPSCounterValue);
@@ -315,7 +315,7 @@ void Screen1_OnUpdate()
     {
         case SCREEN_DO_NOTHING:
         {
-            if(leGetRenderState()->frameState == LE_FRAME_READY &&
+            if(leRenderer_IsIdle() &&
                leEvent_GetCount() == 0)
             {
                 decrementCount();
@@ -325,7 +325,7 @@ void Screen1_OnUpdate()
         }
         case SCREEN_COUNTER_SIZE_UP:
         {
-            if(leGetRenderState()->frameState == LE_FRAME_READY &&
+            if(leRenderer_IsIdle() &&
                leEvent_GetCount() == 0)
             {
                 increaseCounterSize();
@@ -337,7 +337,7 @@ void Screen1_OnUpdate()
         }
         case SCREEN_COUNTER_SIZE_DOWN:
         {
-            if(leGetRenderState()->frameState == LE_FRAME_READY &&
+            if(leRenderer_IsIdle() &&
                leEvent_GetCount() == 0)
             {
                 decreaseCounterSize();
@@ -359,7 +359,7 @@ void Screen1_OnUpdate()
         }
         case SCREEN_WAIT_FOR_NEXT:
         {
-            if(leGetRenderState()->frameState == LE_FRAME_READY &&
+            if(leRenderer_IsIdle() &&
                leEvent_GetCount() == 0)
             {
                 screenState = SCREEN_MOVE_TO_NEXT;

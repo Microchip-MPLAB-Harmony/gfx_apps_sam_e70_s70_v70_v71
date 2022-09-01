@@ -595,9 +595,9 @@ void APP_Tasks ( void )
             default_RecordsTotalLabel->fn->setVisible(default_RecordsTotalLabel, LE_TRUE);
 
 #ifdef _STDLIB_ULTOA
-			itoa(number, recordCount, 10);
+            itoa(number, recordCount, 10);
 #else
-			itoa(recordCount, number, 10);
+            itoa(recordCount, number, 10);
 #endif
             
             counterStr.fn->setFromCStr(&totalStr, number);
@@ -605,7 +605,7 @@ void APP_Tasks ( void )
 
             memset(writeBuffer, 0x0, BUFFER_SIZE);
 
-			// initailize hex decoder
+			// initialize hex decoder
 			HexDecoder_Initialize(&dec,
 				recordCount,
 				writeBuffer,
@@ -634,9 +634,9 @@ void APP_Tasks ( void )
 		case APP_PRE_DECODE:
 		{
 #ifdef _STDLIB_ULTOA
-			itoa(number, dec.currentRecord + 1, 10);
+            itoa(number, dec.currentRecord + 1, 10);
 #else
-			itoa(dec.currentRecord + 1, number, 10);
+            itoa(dec.currentRecord + 1, number, 10);
 #endif
             
             counterStr.fn->setFromCStr(&counterStr, number);

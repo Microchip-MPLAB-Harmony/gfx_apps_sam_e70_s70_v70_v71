@@ -68,7 +68,7 @@
  
 
 /* Callback object for channel 1 */
-TC_COMPARE_CALLBACK_OBJECT TC2_CH1_CallbackObj;
+static TC_COMPARE_CALLBACK_OBJECT TC2_CH1_CallbackObj;
 
 /* Initialize channel in compare mode */
 void TC2_CH1_CompareInitialize (void)
@@ -122,7 +122,7 @@ void TC2_CH1_ComparePeriodSet (uint16_t period)
 /* Read the period value */
 uint16_t TC2_CH1_ComparePeriodGet (void)
 {
-    return TC2_REGS->TC_CHANNEL[1].TC_RC;
+    return (uint16_t)TC2_REGS->TC_CHANNEL[1].TC_RC;
 }
 
 /* Set the compare A value */
